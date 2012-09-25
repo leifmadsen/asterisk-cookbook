@@ -9,6 +9,7 @@
 
 include_recipe "build-essential"
 include_recipe "ntp"
+include_recipe "asterisk::#{node['asterisk']['install_method']}"
 
 case node['platform']
 when "centos", "redhat", "rhel", "fedora", "amazon", "scientific"
